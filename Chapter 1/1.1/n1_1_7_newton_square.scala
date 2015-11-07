@@ -1,9 +1,6 @@
 object NewtonSquare {
     private def squareIteration(guess: Double, x: Double): Double = {
-        if (guessGoodEnough(guess, x))
-            guess
-        else
-            squareIteration(improveGuess(guess, x), x)
+        if (guessGoodEnough(guess, x)) guess else squareIteration(improveGuess(guess, x), x)
     }
 
     private def improveGuess(guess: Double, x: Double): Double = {

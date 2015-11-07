@@ -1,9 +1,6 @@
 object P1_7 {
     private def squareIteration(guess: Double, x: Double, previousGuess: Double): Double = {
-        if (guessGoodEnough(guess, previousGuess))
-            guess
-        else
-            squareIteration(improveGuess(guess, x), x, guess)
+        if (guessGoodEnough(guess, previousGuess)) guess else squareIteration(improveGuess(guess, x), x, guess)
     }
 
     private def improveGuess(guess: Double, x: Double): Double = {

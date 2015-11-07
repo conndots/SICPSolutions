@@ -6,10 +6,7 @@ object P1_4 {
     implicit def shortToDouble(s: Short): Double = s.toDouble
 
     def aPlusAbsB(a: Double, b: Double): Double = {
-        if (b > 0)
-            apply(plus, a, b)
-        else
-            apply(minus, a, b)
+        if (b > 0) apply(plus, a, b) else apply(minus, a, b)
     }
     private def apply[T](action: ((T, T) => T), a: T, b: T): T = {
         action(a, b)
